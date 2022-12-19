@@ -3,7 +3,8 @@ var txtInput = document.querySelector("#txt-input")
 var outputDiv = document.querySelector("#output")
 
 // var serverUrl = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
-var serverUrl = "https://api.funtranslations.com/translate/minion.json"
+// var serverUrl = "https://api.funtranslations.com/translate/minion.json"
+var serverUrl = "https://api.funtranslations.com/translate/valyrian.json"
 
 function getTranslation(text){
     return serverUrl + "?" + "text=" + text
@@ -12,6 +13,7 @@ function getTranslation(text){
 
 function errorHandler(error){
     console.log("error occured", error)
+    outputDiv.innerText = "Limit Exceed: Please try after sometime"
 }
 
 function clickHandler(){
